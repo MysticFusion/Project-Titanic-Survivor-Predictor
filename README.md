@@ -34,5 +34,8 @@ The Titanic Survival Prediction App allows users to enter passenger details (suc
 
 ---
 
-## 📁 Folder Structure
+## 📦 Setup Instructions
 
+1. Install dependencies:
+```bash/Powershell
+pip install -r requirements.txt
