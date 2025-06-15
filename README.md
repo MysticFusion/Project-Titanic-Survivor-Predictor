@@ -30,7 +30,7 @@ The Titanic Survival Prediction App allows users to enter passenger details (suc
 - **Pandas**, **NumPy** – for data analysis
 - **Scikit-learn** – for machine learning modeling
 - **Streamlit** – for web app interface
-- **Matplotlib / Seaborn** (optional) – for data visualization
+- **Matplotlib / Seaborn** – for data visualization
 
 ---
 
