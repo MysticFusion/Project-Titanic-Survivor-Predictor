@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Enabled-orange?logo=streamlit)
 
-An interactive machine learning web application that predicts the survival of Titanic passengers based on historical data. Built with **Python**, **Scikit-learn**, and **Streamlit**, this project demonstrates end-to-end ML development — from data processing to deployment.
+An interactive machine learning web application that predicts the survival of Titanic passengers based on historical data. Built with **Python**, **Scikit-learn**, and **Streamlit**.
 
 ---
 
