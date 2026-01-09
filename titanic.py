@@ -1,13 +1,11 @@
-# titanic_survival.py
-
 import pandas as pd
-import numpy as np
+# import numpy as np  <-- Removed (Unused)
 import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns <-- Removed (Unused)
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, ConfusionMatrixDisplay
 
 # Ignore warnings
 import warnings
@@ -53,8 +51,18 @@ model.fit(X_train, y_train)
 # Predict and evaluate
 y_pred = model.predict(X_val)
 print("Validation Accuracy:", accuracy_score(y_val, y_pred))
-print("Confusion Matrix:\n", confusion_matrix(y_val, y_pred))
 print("Classification Report:\n", classification_report(y_val, y_pred))
+
+# --- NEW: VISUALIZE CONFUSION MATRIX WITH MATPLOTLIB ---
+cm = confusion_matrix(y_val, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=["Died", "Survived"])
+
+# Create the plot
+plt.figure(figsize=(8, 6))
+disp.plot(cmap=plt.cm.Blues)
+plt.title("Confusion Matrix: Logistic Regression")
+plt.show() 
+# -------------------------------------------------------
 
 # Predict on test set
 test_predictions = model.predict(X_test_final)
